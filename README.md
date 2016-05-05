@@ -104,4 +104,5 @@ Done building target "_DetectSigningIdentity" in project "/Users/wk/Source/xamar
 
 ## Link
 
+- https://github.com/xamarin/xamarin-macios/blob/2edb2ae4f5bb371a7006731987717c01f8725420/msbuild/Xamarin.MacDev.Tasks.Core/Tasks/DetectSigningIdentityTaskBase.cs
 - https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning
