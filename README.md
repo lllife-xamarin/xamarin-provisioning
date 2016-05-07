@@ -1,4 +1,17 @@
-## Error
+## Device provisioning
+
+หลังจาก Activate Xamarin.iOS ถ้าต้องการเทสโปรแกรมกับ iPhone ต้อง Provision device เสียก่อน คือต้องบอก Apple ว่าเราจะติดตั้งโปรแกรมลงไปในเครื่อง
+
+## ขั้นตอน
+
+- สมัคร Apple id
+- สมัคร Developer program
+- Generate development certificate
+- เพิ่ม  iOS Device
+- สร้าง Provisioning profile / Team provisioning profile
+- ..
+
+## ถ้ามี Error หลังจากนี้ เช่น
 
 >> "Error: No installed provisioning profiles match the installed iOS code signing keys"
 
@@ -89,20 +102,13 @@ Done executing task "DetectSigningIdentity"
 Done building target "_DetectSigningIdentity" in project "/Users/wk/Source/xamarin/xamarin-forms-fsharp/iOS/Hello.iOS.fsproj".
 ```
 
-## Device provisioning
+### `No installed provisioning profiles`
 
-หลังจาก Activate Xamarin.iOS ถ้าต้องการเทสโปรแกรมกับ iPhone ต้อง Provision device เสียก่อน คือต้องบอก Apple ว่าเราจะติดตั้งโปรแกรมลงไปในเครื่อง
-
-## ขั้นตอน
-
-- สมัคร Apple id
-- สมัคร Developer program
-- Generate development certificate
-- เพิ่ม  iOS Device
-- สร้าง Provisioning profile / Team provisioning profile
-- ..
+- ให้ลบ `<CodesignEntitlements>` ออกจาก `Hanselman.iOS.csproj`
+- Build ใหม่ด้วยคำสั่ง `xbuild Hanselman.iOS/Hanselman.iOS.csproj /t:_DetectSigningIdentity /v:diag`
 
 ## Link
 
+- http://forums.xamarin.com/discussion/39534/cant-build-ios-in-xamarin-studio-5-7-1-through-5-9
 - https://github.com/xamarin/xamarin-macios/blob/2edb2ae4f5bb371a7006731987717c01f8725420/msbuild/Xamarin.MacDev.Tasks.Core/Tasks/DetectSigningIdentityTaskBase.cs
 - https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning
