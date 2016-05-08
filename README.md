@@ -109,6 +109,7 @@ Done building target "_DetectSigningIdentity" in project "/Users/wk/Source/xamar
 
 ## Link
 
+- http://stackoverflow.com/questions/30724551/no-installed-provisioning-profiles-match-the-installed-ios-code-signing-keys-in
 - http://forums.xamarin.com/discussion/39534/cant-build-ios-in-xamarin-studio-5-7-1-through-5-9
 - https://github.com/xamarin/xamarin-macios/blob/2edb2ae4f5bb371a7006731987717c01f8725420/msbuild/Xamarin.MacDev.Tasks.Core/Tasks/DetectSigningIdentityTaskBase.cs
 - https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning
